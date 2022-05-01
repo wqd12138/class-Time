@@ -7,6 +7,7 @@ class Time
 public:
 	Time();//无参构造
 	Time(int h,int m=0);//有参构造//默认参数要写在声明
+	//Time( t);
 	void addMin(int m);//分钟加
 	void addHour(int h);//小时加
 	void reset(int h=0,int m=0);//重设时分//默认参数要写在声明
