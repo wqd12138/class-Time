@@ -28,7 +28,7 @@ void Time::reset(int h,int m)//重设时分
 	_hour = h;
 	_minute = m;
 }
-Time Time::sum(const Time & t)//时间相加
+Time Time::operator+(const Time & t)//时间相加
 {
 	Time sum;
 	sum._minute = this->_minute +t._minute;
