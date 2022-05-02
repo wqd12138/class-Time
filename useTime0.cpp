@@ -32,8 +32,13 @@ int main()
 	t2.show();
 	Time t3=t1 - t2;
 	t3.show();
-	Time t4=t1*5.6;
+	Time t4=t1*5.6;//要求t1在前，5.6在后，因为重载运算符的顺序是这样的
 	t4.show();
+	Time t5=1.2*t1;//友元重载*
+	t5.show();
+
+	Time t6=1.5*t1*2.5;
+	t6.show();
 	system("pause");
 	return 0;
 }
