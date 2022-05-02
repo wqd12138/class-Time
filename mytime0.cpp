@@ -36,6 +36,27 @@ Time Time::operator+(const Time & t)//时间相加
 	sum._minute %=60;
 	return sum;//不能返回一个局部变量或者临时对象的引用
 }
+Time Time::operator-(const Time & t)//时间相加
+{
+	Time diff;
+	int sum1,sum2;
+	sum1 =t._minute + t._hour*60;
+	sum2 =this->_minute + this->_hour*60;
+	diff._hour = (sum2 - sum1)/60;
+	diff._minute = (sum2 - sum1)%60;
+
+	return diff;
+}
+Time Time::operator*(double num)//时间相加
+{
+	Time mul;
+	long sum;
+	sum =_minute*num + _hour*60*num;
+	mul._hour = sum/60;
+	mul._minute = sum%60;
+
+	return mul;
+}
 void Time::show() const//展示时间
 {
 	std::cout<<_hour<<" hours "<<_minute<<" minutes"<<std::endl;
