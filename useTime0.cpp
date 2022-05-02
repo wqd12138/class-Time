@@ -39,6 +39,11 @@ int main()
 
 	Time t6=1.5*t1*2.5;
 	t6.show();
+
+	/*int num =100;
+	const int & num1 =num;
+	num1 =200;
+	cout<<num<endl;*/
 	system("pause");
 	return 0;
 }

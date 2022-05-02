@@ -61,13 +61,19 @@ void Time::show() const//展示时间
 {
 	std::cout<<_hour<<" hours "<<_minute<<" minutes"<<std::endl;
 }
-Time operator*(double num,Time const & t)
-{
-	Time mul;
-	long sum;
-	sum =t._minute*num + t._hour*60*num;
-	mul._hour = sum/60;
-	mul._minute = sum%60;
+//Time operator*(double num,const Time & t)
+//{
+//	Time mul;
+//	long sum;
+//	sum =t._minute*num + t._hour*60*num;
+//	mul._hour = sum/60;
+//	mul._minute = sum%60;
+//
+//	return mul;
+//}
 
-	return mul;
+Time operator*(double num,Time  t)
+{
+
+	return t*num;
 }

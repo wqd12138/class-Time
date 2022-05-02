@@ -14,10 +14,12 @@ public:
 	Time operator+(const Time & t);//时间相加
 	Time operator-(const Time & t);//减
 	Time operator*(double);//乘
-	friend Time operator*(double,Time const & t);//乘
+	
+	friend Time operator*(double,Time t);//乘
 	void show() const;//展示时间
 private:
 	int _hour;//小时
 	int _minute;//分钟
 };
+
 #endif
