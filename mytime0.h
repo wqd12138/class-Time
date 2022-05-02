@@ -1,7 +1,7 @@
 //mytime0.h    time class  before operator overloading
 #ifndef MYTIME0_H_
 #define MYTIME0_H_
-
+#include<iostream>
 class Time
 {
 public:
@@ -14,8 +14,11 @@ public:
 	Time operator+(const Time & t);//时间相加
 	Time operator-(const Time & t);//减
 	Time operator*(double);//乘
-	
-	friend Time operator*(double,Time t);//乘
+	friend Time operator*(double num,Time &t)
+	{
+		return t*num;
+	}//乘
+	friend std::ostream & operator<<(std::ostream &os,Time &t);
 	void show() const;//展示时间
 private:
 	int _hour;//小时

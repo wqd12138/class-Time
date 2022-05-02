@@ -72,8 +72,8 @@ void Time::show() const//展示时间
 //	return mul;
 //}
 
-Time operator*(double num,Time  t)
+std::ostream & operator<<(std::ostream &os,Time &t)
 {
-
-	return t*num;
+	os<< t._hour<<" hours, "<<t._minute<<" minutes";
+	return os;
 }

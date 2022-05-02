@@ -44,6 +44,8 @@ int main()
 	const int & num1 =num;
 	num1 =200;
 	cout<<num<endl;*/
+	Time t8(9,9);
+	std::cout<<t8;
 	system("pause");
 	return 0;
 }
